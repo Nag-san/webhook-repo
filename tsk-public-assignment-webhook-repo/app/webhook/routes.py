@@ -85,7 +85,7 @@ def get_webhooks():
         total = ref.count_documents({})
         push = ref.count_documents({"action": "push"})
         pull_requests = ref.count_documents({"action": "pull_request"})
-        pull_request_merged = ref.count_documents({"action": "pull_request_merged"})  # Fixed to match your action name
+        pull_request_merged = ref.count_documents({"action": "pull_request_merged"})  
 
         stats = {
             "total": total, 

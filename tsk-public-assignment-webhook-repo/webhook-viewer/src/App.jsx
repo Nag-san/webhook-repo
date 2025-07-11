@@ -5,6 +5,7 @@ function App() {
   const [webhooks, setWebhooks] = useState([]);
   const [stats, setstats] = useState([]);
 
+  //Fetch data from server
   const fetchWebhooks = async () => {
     try {
       const response = await axios.get("http://localhost:5000/webhook/data");
@@ -25,6 +26,7 @@ function App() {
     return () => clearInterval(interval);
   }, []);
 
+  //Calculate how much time ago
   const timeAgo = (time) => {
     if (!time) return "";
 
